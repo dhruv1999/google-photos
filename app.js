@@ -188,7 +188,7 @@ app.get('/googleb4862e287da4d231.html', (req, res) => {
 	if (!req.user || !req.isAuthenticated()) {
 		// Not logged in yet.
 		res.sendFile(
-			path.join(__dirname + 'views/pages/googleb4862e287da4d231.html')
+			path.join(__dirname + '/views/pages/googleb4862e287da4d231.html')
 		)
 	}
 })
