@@ -188,6 +188,10 @@ app.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+app.get('/googleb4862e287da4d231.html', (req, res) => {
+  res.render('pages/googleb4862e287da4d231')
+});
+
 // Star the OAuth login process for Google.
 app.get('/auth/google', passport.authenticate('google', {
   scope: config.scopes,
