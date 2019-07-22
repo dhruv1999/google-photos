@@ -187,7 +187,7 @@ app.get('/logout', (req, res) => {
 app.get('/googleb4862e287da4d231.html', function(req, res) {
 	app.use(express.static(path.join(__dirname, '/client')))
 	var options = {
-		root: __dirname + '/client/googleb4862e287da4d231.html'
+		root: __dirname + '/client/'
 	}
 	res.sendFile('/googleb4862e287da4d231.html', options, function(err) {
 		if (err) {
