@@ -183,9 +183,9 @@ app.get('/logout', (req, res) => {
 	req.session.destroy()
 	res.redirect('/')
 })
-app.use(express.static(path.join(__dirname, '/client')))
 
 app.get('/googleb4862e287da4d231.html', function(req, res) {
+	app.use(express.static(path.join(__dirname, '/client')))
 	var options = {
 		root: __dirname + '/client/'
 	}
