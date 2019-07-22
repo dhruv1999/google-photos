@@ -183,12 +183,24 @@ app.get('/logout', (req, res) => {
 	req.session.destroy()
 	res.redirect('/')
 })
+app.use(express.static(path.join(__dirname, '/client')))
 
-app.get('/googleb4862e287da4d231.html', (req, res) => {
-	// Not logged in yet.
-	res.sendFile(
-		path.join(__dirname + '/views/pages/googleb4862e287da4d231.html')
-	)
+app.get('googleb4862e287da4d231.html', function(req, res) {
+	var options = {
+		root: __dirname + '/client/'
+	}
+	res.sendFile('/index.html', options, function(err) {
+		if (err) {
+			console.log(
+				'Error in res : %s, status code: %s',
+				err,
+				res.statusCode
+			)
+			res.status(err.status).end()
+		} else {
+			console.log('Sent: ', 'index.html')
+		}
+	})
 })
 
 // Star the OAuth login process for Google.
