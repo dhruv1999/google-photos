@@ -1,7 +1,7 @@
 const config = {};
    config.oAuthClientID = '1090389463761-9o4mrakp79i48npnhmd92inh2lalul61';
    config.oAuthclientSecret = 'oZuCLxtGrORgzhXv-ieDpMUa';
-   config.oAuthCallbackUrl = 'http://127.0.0.1:8080/auth/google/callback';
+   config.oAuthCallbackUrl = 'https://shielded-brushlands-68752.herokuapp.com/auth/google/callback';
    config.port = process.env.PORT || 8080;
    config.scopes = [
   'https://www.googleapis.com/auth/photoslibrary.readonly',
