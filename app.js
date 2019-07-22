@@ -185,7 +185,9 @@ app.get('/logout', (req, res) => {
 })
 
 app.get('/googleb4862e287da4d231.html', (req, res) => {
-	res.sendFile('pages/googleb4862e287da4d231.html')
+	res.sendFile(
+		path.join(__dirname + 'views/pages/pages/googleb4862e287da4d231.html')
+	)
 })
 
 // Star the OAuth login process for Google.
