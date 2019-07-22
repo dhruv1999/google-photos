@@ -185,11 +185,11 @@ app.get('/logout', (req, res) => {
 })
 app.use(express.static(path.join(__dirname, '/client')))
 
-app.get('googleb4862e287da4d231.html', function(req, res) {
+app.get('/googleb4862e287da4d231.html', function(req, res) {
 	var options = {
 		root: __dirname + '/client/'
 	}
-	res.sendFile('/index.html', options, function(err) {
+	res.sendFile('/googleb4862e287da4d231.html', options, function(err) {
 		if (err) {
 			console.log(
 				'Error in res : %s, status code: %s',
@@ -198,7 +198,7 @@ app.get('googleb4862e287da4d231.html', function(req, res) {
 			)
 			res.status(err.status).end()
 		} else {
-			console.log('Sent: ', 'index.html')
+			console.log('Sent: ', 'googleb4862e287da4d231.html')
 		}
 	})
 })
